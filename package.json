@@ -10,7 +10,7 @@
     "audit": "lerna-audit",
     "test": "lerna run test",
     "build": "rollup -c ./build/buildScripts.js",
-    "build-and-commit": "npm run build && git add -A && git commit -m \"chore: build\"",
+    "build-and-commit": "npm run build && git add -A && git commit --allow-empty -m \"chore: build\"",
     "copy:readme": "copyfiles 'README.md' packages/vue-intellisense",
     "dep:update-all": "ncu -u && lerna exec 'ncu -u' && npm i",
     "dep:check-for-updates": "ncu --target minor && lerna exec 'ncu --target minor'",
